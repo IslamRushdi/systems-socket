@@ -24,9 +24,9 @@ def OCR_request(data):
     id = request.sid
     print('here')
     Apple_price = 20*data[Apples]
-    Banana_price = 20*data[Bananas]
-    oranges_price = 20*data[Oranges]
-    response = Apple_price + Banana_price + oranges_price
+    Banana_price = 30*data[Bananas]
+    orange_price = 10*data[Oranges]
+    response = Apple_price + Banana_price + orange_price
     print(response)   
     socketio.emit('Server: Response', response , room = id ) 
     
